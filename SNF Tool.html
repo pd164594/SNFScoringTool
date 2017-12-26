@@ -1,99 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Skilled Nursing Facility Scoring Tool</title>
-	
-	<!-- Jquery Link -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="stylesheet/style.css">
+    <title>Skilled Nursing Facility Scoring Tool</title>
+    <!-- Jquery Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/style.css">
 </head>
+
 <body>
-<div class="container-fluid">
-
-	<h1>Search Criteria</h1>
-		
-	<div class="searchSurgeon">
-		Search State <input id="state"><br>
-		<button id="searchClick">Search</button>
-	</div>
-	
-	<div class="row">
-		<div class ="resultsDiv col-md-12">
-			Things go here
-		</div>
-	</div>
-</div>
-
+    <div class="container-fluid">
+        <h1>Skilled Nursing Facility Scoring Tool</h1>
+        <div class="searchSurgeon">
+            Search State
+            <input id="state">
+            <br><br>
+            <button id="searchClick">Search Your State</button>
+        </div>
+        <div class="row">
+            <div class="resultsDiv col-md-12">
+                
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="javascript/js.js"></script>
-
-<!-- 	<script type="text/javascript">
-
-		
-		$('#searchClick').on("click", function(){
-
-			// collecting the value from the input field.
-			var state = $('#state').val().trim();
-
-			// This is our API call using the name from the input box to make the call for all surgeons with a last name of something specific. 
-			var queryURL = "https://data.cms.gov/resource/jc9n-itkq.json/";
-			console.log("Click Is Working");
-
-	
-
-			
-
-			// This is the Actual API call. Using the Get Method. 
-			$.ajax({
-			          url: queryURL,
-			          method: "GET"
-			        }).done(function(response){
-			        	// console.log(response);
-
-			 
-			        	// Looping over all of the responses in my Ajax call. 
-						for(var i=0; i<response.length; i++){	
-
-							if(state == response[i].state){
-								// console.log(response);
-
-							// Creating Containers to append data to. 
-							var resultsDiv = $(".resultsDiv");
-							var snfResults = $("<div>");
-							var snfName = $("<div>");
-				        	var snfDetails = $("<div>");
-				        	var snfState = $("<div>");
-
-				        	// Pulling Specific Variables from the AJAX call and the objects.
-				        	snfResults.attr("id", "mainSNFContainer") 
-				        	snfName.attr("id", "snfName");
-				        	snfName.text("SNF Name: " + response[i].facility_name);
-				        	snfState.attr("id", "snfState");
-				        	snfState.text("The SNF State is: " + response[i].state);
-				        	snfDetails.attr("id", "snfDetails");		        	
-				        	snfDetails.text("Average Patient Age: " + response[i].average_age);
-
-				        	// Appending everying to a main parent DIV 
-				        	snfResults.append(snfName);
-				        	snfResults.append(snfDetails);
-				        	snfResults.append(snfState);
-
-				        	// Appending to the Results Div in the HTML document
-				        	resultsDiv.append(snfResults);
-				        	}
-				        }
-			        
-
-			        });
-
-
-			
-		})
-
-
-		
-
-	</script> -->
 
 </html>

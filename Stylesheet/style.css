@@ -2,3 +2,13 @@ body{
 	background: grey;
 }
 
+#mainSNFContainer{
+	float:left;
+	margin-right: 40px;
+	margin-bottom: 5px;
+	border-color: white;
+	border-style: solid;
+	align-items: center;
+	font-weight: bold;
+	padding: 10px;
+}
