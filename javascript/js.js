@@ -5,7 +5,7 @@ $('#searchClick').on("click", function() {
     var state = $('#state').val().trim();
 
     // This is our API call using the name from the input box to make the call for all surgeons with a last name of something specific. 
-    var queryURL = "https://data.cms.gov/resource/jc9n-itkq.json/?state=" + state;
+    var queryURL = "https://data.cms.gov/resource/jc9n-itkq.json/?zip_code=" + state;
     console.log("Click Is Working");
 
     // Clearing the main Div after every search
